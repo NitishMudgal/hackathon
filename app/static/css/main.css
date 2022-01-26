@@ -53,3 +53,14 @@ element.style {
 h4 {
     margin-bottom: 0;
 }
+
+.organic {    
+    margin-top: 6px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 29px;
+    line-height: 1.3;
+    color: white;
+    font-family: ui-sans-serif,system-ui,-apple-system;
+}
