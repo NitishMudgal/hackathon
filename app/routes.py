@@ -12,7 +12,7 @@ def index():
        if query_string:
         start = time.time()
         final_list = []
-        raw_data = [json.loads(line) for line in open('hackathon/empireio_tmp_content_first_sentence.json', 'r')]
+        raw_data = [json.loads(line) for line in open('/hackathon/empireio_tmp_content_first_sentence.json', 'r')]
         print('RAW DATA length')
         print(len(raw_data))
         for row in raw_data:
