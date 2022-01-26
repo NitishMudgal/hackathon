@@ -1,0 +1,20 @@
+{## {% extends "bootstrap/base.html" %} ##}
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+<div class="container">
+ <h3>Search Keyword</h3>
+  <hr>
+  <form action="" method="post" class="form" role="form">
+   {{ form.csrf_token() }}
+   <div class="row">
+    <div class="form-group col-md-6">
+     {{ wtf.form_field(form.query_string, class='form-control', 
+        placeholder='Query String') }}
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <hr>
+</div>
+{% endblock %}

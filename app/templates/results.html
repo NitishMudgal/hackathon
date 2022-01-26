@@ -1,0 +1,24 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+<div id="content" class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h6 class="nomargin"> 
+        About {{ final_list|length }} results <small class="text-success">({{processing_time}} milliseconds) </small>
+      </h6>
+      <hr class="nomargin-bottom margin-top-10">
+      <!-- SEARCH RESULTS -->
+        {% for list_element in final_list %}
+          <div class="clearfix search-result"><!-- item -->
+            <h4><a href="#">{{ list_element.title }}</a></h4>
+            <small class="text-success">www.{{list_element.domain}}{{list_element.pagePath}}</small>
+            <p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+          </div>
+          <!-- <a href="" class="list-group-item list-group-item-action active">{{ list_element.title }}</a> -->
+        {% endfor %}
+      <!-- /SEARCH RESULTS -->
+    </div>
+  </div>
+</div>
+{% endblock content %}
