@@ -1,20 +1,14 @@
-{## {% extends "bootstrap/base.html" %} ##}
 {% extends "base.html" %}
-{% import "bootstrap/wtf.html" as wtf %}
 {% block content %}
-<div class="container">
- <h3>Search Keyword</h3>
-  <hr>
-  <form action="" method="post" class="form" role="form">
-   {{ form.csrf_token() }}
-   <div class="row">
-    <div class="form-group col-md-6">
-     {{ wtf.form_field(form.query_string, class='form-control', 
-        placeholder='Query String') }}
+<div class="container index">
+    <form action="{{ url_for('index')}}" method="post">
+    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="row">
+            <div class="col">
+                <div class="search"> <i class="fa fa-search"></i> <input type="text" id="queryString" name="queryString" class="form-control" placeholder="Search Recurrent"> <button type="submit" class="btn btn-primary">Search</button> </div>
+            </div>
+        </div>
     </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-  <hr>
 </div>
-{% endblock %}
+
+{% endblock content %}

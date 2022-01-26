@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
 
 body {
-    background-color: #eee;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300
+    background-color: #fff;
+    font-family: Inter;
+    font-weight: 500
 }
 
 .height {
@@ -18,7 +18,8 @@ body {
 .search input {
     height: 60px;
     text-indent: 25px;
-    border: 2px solid #d6d4d4
+    border: 2px solid #d6d4d4;
+    border-radius: 8px;
 }
 
 .search input:focus {
@@ -38,9 +39,17 @@ body {
     right: 5px;
     height: 50px;
     width: 110px;
-    background: blue
+    background: #664AE1;
+    border-radius: 8px;
 }
 
-/* Background */
+.mainpage {
+    background: linear-gradient(246.29deg, #5C40DE -0.87%, rgba(28, 15, 87, 0) 66.67%), #1C0F57;
+}
+element.style {
+    margin: 20px 0px 0px 0px;
+}
 
-background: linear-gradient(246.29deg, #5C40DE -0.87%, rgba(28, 15, 87, 0) 66.67%), #1C0F57;
+h4 {
+    margin-bottom: 0;
+}

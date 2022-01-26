@@ -1,6 +1,15 @@
-{% extends "bootstrap/base.html" %}
+{% extends "base2.html" %}
 
 {% block content %}
+<div class="container">
+    <form action="{{ url_for('index')}}" method="post">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col" style="margin: 20px 0px 0px 0px;">
+            <div class="search"> <i class="fa fa-search"></i> <input type="text" id="queryString" name="queryString" class="form-control" placeholder="{{ query_string }}"> <button type="submit" class="btn btn-primary">Search</button> </div>
+        </div>
+    </div>
+</div>
+<br />
 <div id="content" class="container">
   <div class="panel panel-default">
     <div class="panel-body">
@@ -11,11 +20,10 @@
       <!-- SEARCH RESULTS -->
         {% for list_element in final_list %}
           <div class="clearfix search-result"><!-- item -->
-            <h4><a href="#">{{ list_element.title }}</a></h4>
+            <h4><a target="_blank" href="https://www.{{list_element.domain}}{{list_element.pagePath}}">{{ list_element.title }}</a></h4>
             <small class="text-success">www.{{list_element.domain}}{{list_element.pagePath}}</small>
-            <p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+            <p>{{list_element.content}}</p>
           </div>
-          <!-- <a href="" class="list-group-item list-group-item-action active">{{ list_element.title }}</a> -->
         {% endfor %}
       <!-- /SEARCH RESULTS -->
     </div>
